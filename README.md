@@ -19,4 +19,4 @@ Beat Saber mod that expands the artwork cover of a song
 
 Special thanks to TJ for helping me with the cover mask and design
 as well as [PixelBoom](https://github.com/rithik-b) for helping me developing the mod and with the design.
-Credits go for Shoko84 for creating the original mod, I only remade it.
+Credits go for Shoko84 for creating the original mod as well as Spooky for remaking the mod, I only updated it.
