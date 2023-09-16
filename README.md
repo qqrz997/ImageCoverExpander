@@ -1,22 +1,23 @@
 # ImageCoverExpander
-Beat Saber mod that expands the artwork cover of a song
+Beat Saber mod that expands the artwork cover of a song.
 
 ## Preview
 <img src="https://user-images.githubusercontent.com/47220139/123475275-d57e4400-d603-11eb-9bfa-330a99c5fa88.png" width=700>
 
-## Installation
+## Installation (PC)
 
-1. Download and Install the required dependencies listed down below.
-2. Download the latest ImageCoverExpander version here -> https://github.com/Spooky323/ImageCoverExpander/releases
-3. Drag & Drop the .DLL file to your plugins folder
+### Manual
+1. Ensure that BSIPA and [SiraUtil](https://github.com/Auros/SiraUtil) is installed, both should be available in [ModAssistant](https://github.com/Assistant/ModAssistant).
+2. Download the latest ImageCoverExpander release for your installed version of Beat Saber from [this repository's releases page](https://github.com/MillzyDev/ImageCoverExpander/releases). It should be a DLL file.
+3. Place the ImageCoverExpander DLL into your Plugins folder, which is located in your Beat Saber installation (assuming that you have run the game at least once with BSIPA installed).
+4. Done! Startup Beat Saber and enjoy the enlarged artwork.
 
 ## Dependencies
-**This Mod requires the following dependencies in order to work properly** <br />
+**This Mod requires the following dependencies in order to work properly**
 - [SiraUtil](https://github.com/Auros/SiraUtil)
-- [BSML](https://github.com/monkeymanboy/BeatSaberMarkupLanguage)
 
-## Thanks
-
-Special thanks to TJ for helping me with the cover mask and design
-as well as [PixelBoom](https://github.com/rithik-b) for helping me developing the mod and with the design.
-Credits go for Shoko84 for creating the original mod as well as Spooky for remaking the mod, I only updated it.
+## Credits
+- [Shoko84](https://github.com/Shoko84) for creating the original mod.
+- [Spooky](https://github.com/Spooky323) for remaking the mod (of which this version is a remake of).
+- [PixelBoom](https://github.com/rithik-b)
+- [Bullet.](https://github.com/XAce1337manX/)
