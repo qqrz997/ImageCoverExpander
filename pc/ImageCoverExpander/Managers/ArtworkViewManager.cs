@@ -40,23 +40,19 @@ namespace ImageCoverExpander.Managers
 
         private void OnDidFinishEvent(MainMenuViewController _, MainMenuViewController.MenuButton __)
         {
-            Transform levelBar = _standardLevelDetailViewController.transform
-                .Find("LevelDetail")
-                .Find("LevelBarBig");
+            LevelBar levelBar = _standardLevelDetailViewController._standardLevelDetailView._levelBar;
 
-            if (!levelBar) return;
+            _siraLog.Info("Expanding artwork for " + levelBar.name);
 
-            _siraLog.Info("Changing artwork for " + levelBar.name);
-
-            var image = levelBar.Find("SongArtwork").GetComponent<RectTransform>();
-            image.sizeDelta = s_expandedSizeDelta;
-            image.localPosition = s_expandedPosition;
-            image.SetAsFirstSibling();
-
-            var imageView = image.GetComponent<ImageView>();
+            ImageView imageView = levelBar._songArtworkImageView;
             imageView.color = new Color(0.5f, 0.5f, 0.5f, 1f);
             imageView.preserveAspect = false;
             imageView._skew = _expandedSkew;
+
+            RectTransform image = imageView.rectTransform;
+            image.sizeDelta = s_expandedSizeDelta;
+            image.localPosition = s_expandedPosition;
+            image.SetAsFirstSibling();
         }
     }
 }
