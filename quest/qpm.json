@@ -32,39 +32,34 @@
       "additionalData": {}
     },
     {
-      "id": "custom-types",
-      "versionRange": "^0.15.24",
-      "additionalData": {}
-    },
-    {
-      "id": "lapiz",
-      "versionRange": "^0.1.11",
+      "id": "paper",
+      "versionRange": "^2.0.0",
       "additionalData": {}
     }
   ],
   "workspace": {
     "scripts": {
       "build": [
-        "pwsh ./scripts/build.ps1"
+        "powershell ./scripts/build.ps1"
       ],
       "copy": [
-        "pwsh ./scripts/copy.ps1"
+        "powershell ./scripts/copy.ps1"
       ],
       "logcat": [
-        "pwsh ./scripts/start-logging.ps1"
+        "powershell ./scripts/start-logging.ps1"
       ],
       "qmod": [
-        "pwsh ./scripts/build.ps1",
-        "pwsh ./scripts/createqmod.ps1"
+        "powershell ./scripts/build.ps1",
+        "powershell ./scripts/createqmod.ps1"
       ],
       "restart": [
-        "pwsh ./scripts/restart-game.ps1"
+        "powershell ./scripts/restart-game.ps1"
       ],
       "stack": [
-        "pwsh ./scripts/ndk-stack.ps1"
+        "powershell ./scripts/ndk-stack.ps1"
       ],
       "tomb": [
-        "pwsh ./scripts/pull-tombstone.ps1"
+        "powershell ./scripts/pull-tombstone.ps1"
       ]
     }
   }
