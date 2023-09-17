@@ -14,8 +14,10 @@
 
 MAKE_HOOK_MATCH(StandardLevelDetailViewController_DidActivate,
                 &GlobalNamespace::StandardLevelDetailViewController::DidActivate, void,
-                GlobalNamespace::StandardLevelDetailViewController *self, bool firstActivation, bool _, bool __) {
-    StandardLevelDetailViewController_DidActivate(self, firstActivation, _, __);
+                GlobalNamespace::StandardLevelDetailViewController *self, bool firstActivation, bool addedToHierarchy, bool screenSystemEnabling) {
+    StandardLevelDetailViewController_DidActivate(self, firstActivation, addedToHierarchy, screenSystemEnabling);
+
+    if (!firstActivation) return;
 
     GlobalNamespace::LevelBar *levelBar = self->standardLevelDetailView->levelBar;
 
@@ -37,7 +39,7 @@ MAKE_HOOK_MATCH(StandardLevelDetailViewController_DidActivate,
 #undef EXPANDED_POSITION
 
 void install_StandardLevelDetailViewController_DidActivate_hook(Logger &logger) {
-    INSTALL_HOOK(logger, StandardLevelDetailViewController_DidActivate);
+    INSTALL_HOOK(logger, StandardLevelDetailViewController_DidActivate)
 }
 
-RegisterInstallFunction(install_StandardLevelDetailViewController_DidActivate_hook);
+RegisterInstallFunction(install_StandardLevelDetailViewController_DidActivate_hook)
