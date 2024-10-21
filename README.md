@@ -9,3 +9,4 @@ Beat Saber mod which expands the artwork cover of a song. This is a continuation
 - [Spooky](https://github.com/Spooky323) for remaking the mod (of which this version is a remake of).
 - [PixelBoom](https://github.com/rithik-b)
 - [Bullet.](https://github.com/XAce1337manX/)
+- [Milzy](https://github.com/MillzyDev)
