@@ -3,7 +3,7 @@
   "id": "ImageCoverExpander",
   "name": "ImageCoverExpander",
   "author": "Millzy",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Beat Saber mod that expands the artwork cover of a song.",
   "gameVersion": "1.38.0",
   "dependsOn": {

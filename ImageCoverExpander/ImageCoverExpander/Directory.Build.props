@@ -1,36 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- This file contains project properties used by the build. -->
 <Project>
-    <!-- Manifest -->
-    <PropertyGroup>
-        <AssemblyName>ImageCoverExpander</AssemblyName>
-        <Authors>Millzy</Authors>
-        <Version>3.0.0</Version>
-        <GameVersion>1.29.1</GameVersion>
-        <Description>Beat Saber mod that expands the artwork cover of a song.</Description>
-        <ProjectHome>https://github.com/MillzyDev/ImageCoverExpander</ProjectHome>
-        <ProjectSource>https://github.com/MillzyDev/ImageCoverExpander</ProjectSource>
-        <Donate>https://ko-fi.com/millzy</Donate>
-    </PropertyGroup>
+  <PropertyGroup>
+    <ImportBSMTTargets>True</ImportBSMTTargets>
+    <BSMTProjectType>BSIPA</BSMTProjectType>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <DisableCopyToPlugins>true</DisableCopyToPlugins>
+    <DisableZipRelease>true</DisableZipRelease>
+  </PropertyGroup>
 
-    <ItemGroup>
-        <Dependency Include="BSIPA" Version="^4.2.0"/>
-    </ItemGroup>
-
-    <!-- End Manifest -->
-    <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-        <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-        <DisableCopyToPlugins>true</DisableCopyToPlugins>
-        <DisableZipRelease>true</DisableZipRelease>
-    </PropertyGroup>
-
-    <ItemGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
-        <SourceRoot Include="$(MSBuildThisFileDirectory)/"/>
-    </ItemGroup>
-
-    <PropertyGroup Condition="'$(NCrunch)' == '1'">
-        <ContinuousIntegrationBuild>false</ContinuousIntegrationBuild>
-        <DisableCopyToPlugins>true</DisableCopyToPlugins>
-        <DisableZipRelease>true</DisableZipRelease>
-    </PropertyGroup>
+  <ItemGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <SourceRoot Include="$(MSBuildThisFileDirectory)/"/>
+  </ItemGroup>
 </Project>
